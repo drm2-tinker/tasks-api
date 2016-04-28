@@ -3,3 +3,8 @@
 
 # OS X
 .DS_Store
+
+# Laravel
+/vendor
+/public/storage
+/.env
