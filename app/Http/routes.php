@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Load the Dingo Router
+$api = app('Dingo\Api\Routing\Router');
+
+// API Routes
+$api->version('v1', [], function ($api)
+{
+    // ANY /api/testing - these routes are just for testing
+    $api->group([ 'prefix' => '/test' ], function ($api)
+    {
+        $api->get('/', function ()
+        {
+            return 'Hello, World!';
+        });
+    });
+});
