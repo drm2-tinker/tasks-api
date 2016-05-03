@@ -113,6 +113,7 @@ return [
 
     'persistences' => [
 
+        // 'model' => 'Cartalyst\Sentinel\Persistences\EloquentPersistence',
         'model' => 'Cartalyst\Sentinel\Persistences\EloquentPersistence',
 
         'single' => false,
