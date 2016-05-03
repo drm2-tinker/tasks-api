@@ -66,6 +66,7 @@ class MigrationCartalystSentinel extends Migration
             $table->string('name');
             $table->text('permissions')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->engine = 'InnoDB';
             $table->unique('slug');
@@ -100,6 +101,7 @@ class MigrationCartalystSentinel extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->engine = 'InnoDB';
             $table->unique('email');
