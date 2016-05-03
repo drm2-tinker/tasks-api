@@ -61,7 +61,7 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id')->primary();
             $table->string('slug');
             $table->string('name');
             $table->text('permissions')->nullable();
@@ -73,7 +73,7 @@ class MigrationCartalystSentinel extends Migration
 
         Schema::create('role_users', function (Blueprint $table) {
             $table->uuid('user_id');
-            $table->integer('role_id')->unsigned();
+            $table->uuid('role_id');
             $table->nullableTimestamps();
 
             $table->engine = 'InnoDB';
