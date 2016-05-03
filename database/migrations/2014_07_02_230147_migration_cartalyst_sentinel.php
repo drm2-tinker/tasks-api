@@ -81,7 +81,7 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('throttle', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id')->primary();
             $table->uuid('user_id')->nullable();
             $table->string('type');
             $table->string('ip')->nullable();
