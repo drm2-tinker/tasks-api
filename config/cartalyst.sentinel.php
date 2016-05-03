@@ -178,7 +178,8 @@ return [
 
     'reminders' => [
 
-        'model' => 'Cartalyst\Sentinel\Reminders\EloquentReminder',
+        // 'model' => 'Cartalyst\Sentinel\Reminders\EloquentReminder',
+        'model' => 'App\Models\Auth\Reminder',
 
         'expires' => 14400,
 
