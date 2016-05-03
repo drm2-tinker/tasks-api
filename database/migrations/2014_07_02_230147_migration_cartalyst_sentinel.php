@@ -52,7 +52,7 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('reminders', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id')->primary();
             $table->uuid('user_id');
             $table->string('code');
             $table->boolean('completed')->default(0);
