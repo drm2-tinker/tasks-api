@@ -114,7 +114,7 @@ return [
     'persistences' => [
 
         // 'model' => 'Cartalyst\Sentinel\Persistences\EloquentPersistence',
-        'model' => 'Cartalyst\Sentinel\Persistences\EloquentPersistence',
+        'model' => 'App\Models\Auth\Persistence',
 
         'single' => false,
 
