@@ -31,7 +31,7 @@ class MigrationCartalystSentinel extends Migration
     public function up()
     {
         Schema::create('activations', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id')->primary();
             $table->uuid('user_id');
             $table->string('code');
             $table->boolean('completed')->default(0);
