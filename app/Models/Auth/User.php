@@ -13,5 +13,5 @@ class User extends EloquentUser
     public $incrementing = false;
 
     // make sure dates are mutated into Carbon objects
-    protected $dates = [ 'created_at', 'updated_at', 'deleted_at' ];
+    protected $dates = [ 'created_at', 'updated_at', 'deleted_at', 'last_login' ];
 }
