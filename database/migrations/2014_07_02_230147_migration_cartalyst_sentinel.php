@@ -42,7 +42,7 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('persistences', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
             $table->uuid('user_id');
             $table->string('code');
             $table->timestamps();
