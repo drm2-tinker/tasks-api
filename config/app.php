@@ -161,6 +161,7 @@ return [
          */
         Dingo\Api\Provider\LaravelServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
 
     ],
 
