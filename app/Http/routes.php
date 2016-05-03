@@ -21,14 +21,26 @@ $api = app('Dingo\Api\Routing\Router');
 // API Routes
 $api->version('v1', [], function ($api)
 {
+    // authenticated routes (most routes should be authenticated by default)
+    $api->group([ 'middleware' => 'api.auth' ], function ($api)
+    {
+        // GET /api/auth-test
+        $api->get('/auth-test', function ()
+        {
+            return 'Hello, Authenticated World!';
+        });
+    });
+
     // ANY /api/testing - these routes are just for testing
     $api->group([ 'prefix' => '/test' ], function ($api)
     {
+        // GET /api/test
         $api->get('/', function ()
         {
             return 'Hello, World!';
         });
 
+        // POST /api/test/authenticate
         $api->post('/authenticate', 'App\Http\Controllers\Auth\AuthController@authenticate');
     });
 });
