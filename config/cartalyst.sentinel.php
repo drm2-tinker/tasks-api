@@ -231,7 +231,8 @@ return [
 
     'throttling' => [
 
-        'model' => 'Cartalyst\Sentinel\Throttling\EloquentThrottle',
+        // 'model' => 'Cartalyst\Sentinel\Throttling\EloquentThrottle',
+        'model' => 'App\Models\Auth\Throttle',
 
         'global' => [
 
