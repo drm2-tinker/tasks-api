@@ -151,11 +151,16 @@ return [
         /*
          * Application Service Providers...
          */
-        Dingo\Api\Provider\LaravelServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Third Party Service Providers
+         */
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+        Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
 
     ],
 
