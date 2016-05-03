@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "ramsey/uuid": "^3.4",
         "dingo/api": "1.0.x@dev",
-        "tymon/jwt-auth": "^0.5.9"
+        "tymon/jwt-auth": "^0.5.9",
+        "cartalyst/sentinel": "2.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
