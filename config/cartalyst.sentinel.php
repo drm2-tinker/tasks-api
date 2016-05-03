@@ -155,7 +155,8 @@ return [
 
     'activations' => [
 
-        'model' => 'Cartalyst\Sentinel\Activations\EloquentActivation',
+        // 'model' => 'Cartalyst\Sentinel\Activations\EloquentActivation',
+        'model' => 'App\Models\Auth\Activation',
 
         'expires' => 259200,
 
