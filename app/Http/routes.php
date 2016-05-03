@@ -28,5 +28,7 @@ $api->version('v1', [], function ($api)
         {
             return 'Hello, World!';
         });
+
+        $api->post('/authenticate', 'App\Http\Controllers\Auth\AuthController@authenticate');
     });
 });
