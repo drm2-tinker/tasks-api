@@ -1,2 +1,3 @@
-# habits
-A simple application for forming (and tracking) habits, tasks, or one-off todos.
+# Tasks API
+
+An API for running scheduled tasks via webhooks (and possibly other integrations).
