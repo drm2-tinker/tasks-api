@@ -12,7 +12,7 @@
 # fork it and change the following to reflect your own copy
 gh_user   = "drmyersii"
 gh_repo   = "vagrant-env-basher"
-gh_branch = "v0.7.0" # if you want to ensure consistency, use a specific tag (e.g. v0.1.0)
+gh_branch = "v0.7.2" # if you want to ensure consistency, use a specific tag (e.g. v0.1.0)
 gh_url    = "https://raw.githubusercontent.com/#{gh_user}/#{gh_repo}/#{gh_branch}"
 
 # path to provisioning scripts
@@ -198,4 +198,20 @@ Vagrant.configure(2) do |config|
 
         # call ruby provisioner
         # config.vm.provision :shell, privileged: false, path: "#{scripts_url}/ruby", args: [ args_ruby_version, args_ruby_package_list ]
+
+    ####
+    ##
+    ## Custom Scripts
+    ##
+    ######
+
+        ####
+        ## CRON
+        ####
+
+        # @param: path to root of project for running Artisan Scheduler CRON
+        args_cron_app_root = "/vagrant"
+
+        # call CRON provisioner
+        config.vm.provision :shell, privileged: false, path: "./cron.sh", args: [ args_cron_app_root ]
 end
