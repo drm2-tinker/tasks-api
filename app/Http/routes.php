@@ -24,6 +24,13 @@ $api->version('v1', [], function ($api)
     // authenticated routes (most routes should be authenticated by default)
     $api->group([ 'middleware' => 'api.auth' ], function ($api)
     {
+        // ANY /api/tasks
+        $api->group([ 'prefix' => '/tasks' ], function ($api)
+        {
+            // POST /api/tasks
+            $api->post('/', 'App\Http\Controllers\TaskController@create');
+        });
+
         // GET /api/auth-test
         $api->get('/auth-test', function ()
         {
