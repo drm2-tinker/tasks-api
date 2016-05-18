@@ -214,4 +214,12 @@ Vagrant.configure(2) do |config|
 
         # call CRON provisioner
         config.vm.provision :shell, privileged: false, path: "./cron.sh", args: [ args_cron_app_root ]
+
+
+        ####
+        ## Migrations/Seeds
+        ####
+
+        # migrate and seed DB
+        config.vm.provision :shell, privileged: false, inline: "cd /vagrant && php artisan migrate --seed"
 end
